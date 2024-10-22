@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wellness Page</title>
+    <link rel="stylesheet" href="style.css">
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        color: #034f58;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 50px;
+        background-color: #EBF4F6;
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+        color: #034f58;
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+    .circle {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: #777;
+        margin-right: 10px;
+        background-image: url(logo.jpg);
+        background-size: cover;
+    }
+
+    nav ul {
+        list-style-type: none;
+        display: flex;
+        gap: 40px;
+    }
+
+    nav ul li {
+            margin-left: 20px;
+            display: inline;
+        }
+
+    nav ul li a {
+        text-decoration: none;
+        color: #034f58;
+        font-weight: bold;
+    }
+
+    nav ul li a:hover {
+        color: #03346E;
+        border-bottom: 2px solid #025f6e;
+    }
+
+    .hero {
+        text-align: center;
+        padding: 60px 20px;
+        background-color: #DCF2F1;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+        margin-bottom: 20px;
+        color: #025f6e;
+    }
+
+    .hero p {
+        max-width: 600px;
+        margin: 0 auto;
+        font-size: 18px;
+        line-height: 1.6;
+    }
+
+    /* Blog and Article List Section */
+    .list-section {
+        padding: 60px 5%;
+        background-color: #EBF4F6;
+        text-align: center;
+    }
+
+    .list-section h2 {
+        font-size: 36px;
+        margin-bottom: 20px;
+        color: #025f6e;
+    }
+
+    .list-section p {
+        font-size: 18px;
+        margin-bottom: 40px;
+        color: #034f58;
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .blog-list, .article-list {
+        display: flex;
+        justify-content: space-around;
+        gap: 30px;
+        flex-wrap: wrap;
+    }
+
+    .blog-entry, .article-entry {
+        width: 30%;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .blog-entry:hover, .article-entry:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    }
+
+    .blog-image, .article-image {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+        border-radius: 10px;
+        margin-bottom: 15px;
+    }
+
+    h3 {
+        color: #025f6e;
+        margin-bottom: 10px;
+        font-size: 24px;
+    }
+
+    .read-more {
+        text-decoration: none;
+        color: #025f6e;
+        font-weight: bold;
+        display: inline-block;
+        margin-top: 10px;
+        padding: 10px 20px;
+        border-radius: 5px;
+        background-color: #f0f9fa;
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .read-more:hover {
+        background-color: #025f6e;
+        color: #fff;
+    }
+
+    /* Content Section */
+    .content-section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 60px 5%;
+        gap: 50px;
+        text-align: justify;
+        background-color: #f9fafb;
+    }
+
+    .left {
+        width: 50%;
+    }
+
+    .left h2 {
+        font-size: 32px;
+        margin-bottom: 20px;
+        color: #025f6e;
+    }
+
+    .left p {
+        margin-bottom: 20px;
+        font-size: 18px;
+        color: #034f58;
+    }
+
+    button {
+        padding: 15px 30px;
+        font-size: 16px;
+        background-color: #025f6e;
+        color: white;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+        background-color: #034f58;
+    }
+
+    .right {
+        width: 40%;
+    }
+
+    .about-img {
+        width: 100%;
+        height: auto;
+        border-radius: 20px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    footer {
+    background-color: #EBF4F6;
+    padding: 40px 20px;  
+    color: #034f58;
+    width: 100%;  
+    margin-top: 40px;  
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; 
+    flex-wrap: wrap;
+    max-width: 1200px; 
+    margin: 0 auto;  
+    padding: 0 20px; 
+}
+
+.footer-info, .footer-links, .footer-contact {
+    flex: 1;
+    min-width: 200px;
+    margin: 10px 20px;  
+}
+
+.footer-info h2, .footer-links h3, .footer-contact h3 {
+    margin-bottom: 10px;
+}
+
+.footer-links ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin: 5px 0;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #034f58;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.footer-contact a {
+    color: #034f58;
+    text-decoration: none;
+}
+
+.footer-contact a:hover {
+    text-decoration: underline;
+}
+</style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <div class="circle"></div>
+            <span>Mind & Thrive</span>
+            </div>
+        <nav>
+            <ul>
+                <li><a href="homepage.html">Home</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="Wellness.html">Blog</a></li>
+                <li><a href="ContactUs.html">Contact</a></li>
+                <li><a href="#">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Wellness Blog</h1>
+        <p>We provide valuable insights into how diet, exercise, sleep, and mindfulness can positively affect your mental well-being.</p>
+    </section>
+
+    <section class="list-section">
+        <h2>Blog List</h2>
+        <p>Explore our collection of blog posts that dive deep into various aspects of mental health and lifestyle improvements.</p> 
+        
+        <div class="blog-list">
+            <div class="blog-entry">
+                <img src="exercise2.jpg" alt="Image for blog post 1" class="blog-image">
+                <h3>Mental Health Through Regular Exercise</h3>
+                <p>Learn how incorporating regular physical activity can boost your mental well-being and reduce stress.</p>
+                <a href="blog.html#blog1" class="read-more">Read More</a>
+            </div>
+    
+            <div class="blog-entry">
+                <img src="sleep2.jpg" alt="Image for blog post 2" class="blog-image">
+                <h3>The Importance of Sleep in Mental Health</h3>
+                <p>Understand how proper sleep patterns can have a significant impact on reducing anxiety and improving focus.</p>
+                <a href="blog.html#blog2" class="read-more">Read More</a>
+            </div>
+    
+            <div class="blog-entry">
+                <img src="mindful.jpg" alt="Image for blog post 3" class="blog-image">
+                <h3>Mindfulness Practices to Boost Mental Resilience</h3>
+                <p>Discover how simple mindfulness practices can enhance your mental strength.</p>
+                <a href="blog.html#blog3" class="read-more">Read More</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="list-section">
+        <h2>Article List</h2>
+        <p>Browse through our in-depth articles that provide detailed guidance on how lifestyle habits can enhance your mental clarity and emotional balance. 
+            <br>These articles offer expert perspectives and actionable steps to take control of your mental wellness.</p>
+        
+        <div class="article-list">
+            <div class="article-entry">
+                <img src="food1.jpg" alt="Image for article 1" class="article-image">
+                <h3>The Role of Nutrition in Mental Health</h3>
+                <p>Learn how proper nutrition can help boost your mood and cognitive function.</p>
+                <a href="article.html#article1" class="read-more">Read More</a>
+            </div>
+    
+            <div class="article-entry">
+                <img src="sleep1.jpg" alt="Image for article 2" class="article-image">
+                <h3>The Power of a Good Night’s Sleep</h3>
+                <p>Discover how getting enough quality sleep can drastically improve your emotional and cognitive well-being.</p>
+                <a href="article.html#article2" class="read-more">Read More</a>
+            </div>
+    
+            <div class="article-entry">
+                <img src="Exercise1.jpg" alt="Image for article 3" class="article-image">
+                <h3>Exercise as a Natural Antidepressant</h3>
+                <p> Learn how regular exercise can combat depression and anxiety.</p>
+                <a href="article.html#article3" class="read-more">Read More</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <div class="left">
+            <h2>Discover real stories</h2>
+            <p>Looking for some inspiration? Check out our Success Stories section to read about individuals who have transformed 
+                their mental health through small, positive lifestyle changes. Click the button below to explore real-life journeys 
+                of improved well-being and find motivation to start your own path to better mental health.</p>
+            <a href="homepage.html#success-story">
+                <button>Read success stories</button>
+              </a>
+        </div>
+        <div class="right">
+            <img src="more.jpg" alt="diet" class="about-img">
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-info">
+                <h2>Mind & Thrive</h2>
+                <p>&copy; 2024 Mind & Thrive. All rights reserved.</p>
+                        <p>Your mental health matters, and we're here to help you on your journey.</p>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="homepage.html">Home</a></li>
+                    <li><a href="About.html">About Us</a></li>
+                    <li><a href="Wellness.html">Blog</a></li>
+                    <li><a href="ContactUs.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h3>Contact Us</h3>
+                <p>Email: <a href="mailto:support@mindandthrive.com">support@mindandthrive.com</a></p>
+                <p>Phone: <a href="tel:01-4132658">01-4132658</a></p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

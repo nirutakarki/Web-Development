@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;  
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 50px;
+            background-color: #EBF4F6;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            color: #034f58;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .circle {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-image: url(logo.jpg);
+            background-size: cover;
+            margin-right: 10px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            gap: 40px;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+            display: inline;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #034f58;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            color: #03346E;
+            border-bottom: 2px solid #025f6e;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 50px 20px;
+            background-color: #DCF2F1;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            color: #025f6e;
+        }
+
+        .hero p {
+            max-width: 600px;
+            margin: 0 auto;
+            font-size: 16px;
+            color: #025f6e;
+        }
+
+        .content-section {
+            padding: 50px 10%;  
+            display: flex;
+            flex-direction: column;
+            gap: 40px;  
+            align-items: center;
+            text-align: justify;
+        }
+
+        .content {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;  
+        }
+
+        .image-block, .text-block {
+            width: 100%;  
+            max-width: 450px;  
+        }
+
+        .about-img {
+            width: 100%;  
+            height: auto;  
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  
+        }
+
+        .text-block h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: #025f6e;
+        }
+
+        .text-block p {
+            margin-bottom: 20px;
+            line-height: 1.6;  
+            color: #333;  
+        }
+
+        /* Footer Styling */
+        footer {
+            background-color: #EBF4F6;
+            padding: 40px 20px;  
+            color: #034f58;
+            width: 100%; 
+            margin-top: 40px;  
+        }
+
+        .footer-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;  
+            flex-wrap: wrap;
+            max-width: 1200px;  
+            margin: 0 auto;  
+            padding: 0 20px;  
+        }
+
+        .footer-info, .footer-links, .footer-contact {
+            flex: 1;
+            min-width: 200px;
+            margin: 10px 20px;  
+        }
+
+        .footer-info h2, .footer-links h3, .footer-contact h3 {
+            margin-bottom: 10px;
+        }
+
+        .footer-links ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .footer-links li {
+            margin: 5px 0;
+        }
+
+        .footer-links a {
+            text-decoration: none;
+            color: #034f58;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-contact a {
+            color: #034f58;
+            text-decoration: none;
+        }
+
+        .footer-contact a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <div class="circle"></div>
+            <span>Mind & Thrive</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="homepage.html">Home</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="Wellness.html">Blog</a></li>
+                <li><a href="ContactUs.html">Contact</a></li>
+                <li><a href="#">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>About Us</h1>
+        <p>At Mind & Thrive, we help you understand the strong connection between lifestyle and mental well-being. 
+            Simple changes like improving your diet, staying active, and getting better sleep can boost your mood and clarity.
+            We provide you with practical advice and expert insights to help you cultivate a healthier lifestyle, one small step at a time.
+        </p>
+    </section>
+
+    <section class="content-section">
+        <div class="content">
+            <div class="text-block">
+                <h2>Our Mission</h2>
+                <p>Our mission is to empower individuals to take control of their mental well-being by making small, meaningful lifestyle changes. 
+                    We believe that mental health is deeply connected to daily habits such as diet, exercise, and sleep. 
+                    By offering practical, science-backed information, expert insights, and motivational success stories, 
+                    we aim to help users create sustainable improvements in their mental health. Our platform is designed to 
+                    guide people toward better mental clarity, reduced stress, and overall emotional well-being through positive lifestyle adjustments.</p>
+            </div>
+            <div class="image-block">
+                <img src="mission.jpg" alt="Our Mission" class="about-img">
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="image-block">
+                <img src="object.jpg" alt="Objective" class="about-img">
+            </div>
+            <div class="text-block">
+                <h2>Our Objective</h2>
+                <p>Our objective is to educate users on how key lifestyle factors such as diet, exercise, and sleep directly influence mental health. 
+                    We aim to provide practical, easy-to-follow guidance that empowers individuals to make healthy changes in their daily lives. 
+                    By sharing success stories and expert advice, we inspire users to develop long-lasting, positive habits that promote overall well-being. 
+                    Additionally, we strive to foster a supportive community where individuals can connect, learn, and grow together, 
+                    all while focusing on mental well-being and balanced living.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-info">
+                <h2>Mind & Thrive</h2>
+                <p>&copy; 2024 Mind & Thrive. All rights reserved.</p>
+                        <p>Your mental health matters, and we're here to help you on your journey.</p>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="homepage.html">Home</a></li>
+                    <li><a href="About.html">About Us</a></li>
+                    <li><a href="Wellness.html">Blog</a></li>
+                    <li><a href="ContactUs.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h3>Contact Us</h3>
+                <p>Email: <a href="mailto:support@mindandthrive.com">support@mindandthrive.com</a></p>
+                <p>Phone: <a href="tel:01-4132658">01-4132658</a></p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

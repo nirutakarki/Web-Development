@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Blogs</title>
+    <link rel="stylesheet" href="style.css">
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    /* padding: 30px; */
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 50px;
+    background-color: #EBF4F6;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    color: #034f58;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #777;
+    margin-right: 10px;
+    background-image: url(logo.jpg);
+    background-size: cover;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 40px;
+}
+
+nav ul li {
+    margin-left: 20px;
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #034f58;
+    font-weight: bold;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #034f58;
+}
+
+nav ul li a:hover {
+    color: #03346E;
+    border-bottom: 2px solid #025f6e;
+}
+
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #DCF2F1;
+    margin-bottom: 40px;
+    color: #025f6e;
+}
+
+.hero h1 {
+    font-size: 48px;
+    color: #025f6e;
+}
+
+.blog-post {
+    background-color: #fff;
+    margin: 20px auto;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    max-width: 800px;
+}
+
+.blog-post h2 {
+    font-size: 28px;
+    color: #025f6e;
+    margin-bottom: 10px;
+}
+
+.blog-post p {
+    margin-bottom: 20px;
+    font-size: 18px;
+    line-height: 1.7;
+    color: #333;
+}
+
+.read-more {
+    color: white;
+    background-color: #034f58;
+    padding: 8px 16px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.read-more:hover {
+    background-color: #025f6e;
+}
+
+.hidden {
+    display: none;
+}
+
+.large-placeholder {
+    width: 100%;
+    height: 200px;
+    background-color: #cccccc;
+    background-size: cover;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+footer {
+    background-color: #EBF4F6;
+    padding: 40px 20px;  
+    color: #034f58;
+    width: 100%;  
+    margin-top: 40px;  
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; 
+    flex-wrap: wrap;
+    max-width: 1200px;  
+    margin: 0 auto;  
+    padding: 0 20px;  
+}
+
+.footer-info, .footer-links, .footer-contact {
+    flex: 1;
+    min-width: 200px;
+    margin: 10px 20px;  
+}
+
+.footer-info h2, .footer-links h3, .footer-contact h3 {
+    margin-bottom: 10px;
+}
+
+.footer-links ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin: 5px 0;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #034f58;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.footer-contact a {
+    color: #034f58;
+    text-decoration: none;
+}
+
+.footer-contact a:hover {
+    text-decoration: underline;
+}
+</style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <div class="circle"></div>
+            <span>Mind & Thrive</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="homepage.html">Home</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="Wellness.html">Blog</a></li>
+                <li><a href="ContactUs.html">Contact</a></li>
+                <li><a href="#">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>All Blogs</h1>
+        <p>Explore all of our wellness blogs covering topics like exercise, sleep, <br>mindfulness, and diet to enhance your mental well-being.</p>
+    </section>
+
+    <!-- Blog 1 -->
+    <section class="blog-post" id="blog1">
+        <div class="large-placeholder" style="background-image: url('exercise2.jpg');"></div>
+        <h2>Boost Your Mental Health Through Regular Exercise</h2>
+        <p><strong>Summary:</strong> Physical activity is not only good for your body but also essential for your mind. Here’s how exercise can help improve your mood, reduce anxiety, and foster long-term mental well-being.</p>
+        <p><a href="javascript:void(0)" class="read-more" data-target="blog1-content">Read more</a></p>
+        <div id="blog1-content" class="hidden">
+            <p>Regular exercise has long been associated with physical health benefits such as weight control, increased strength, and improved heart health. But did you know that it can also significantly improve your mental health? Studies show that engaging in just 30 minutes of physical activity a few times a week can lead to better mood regulation, stress relief, and even reduced symptoms of depression and anxiety.</p>
+            <h3>Key Takeaways:</h3>
+            <ul>
+                <li>Regular exercise promotes the release of mood-enhancing chemicals.</li>
+                <li>Physical activity reduces stress, anxiety, and depressive symptoms.</li>
+                <li>Consistency is key—finding enjoyable activities helps make exercise a lasting habit.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Blog 2 -->
+    <section class="blog-post" id="blog2">
+        <div class="large-placeholder" style="background-image: url('sleep2.jpg');"></div>
+        <h2>Sleep Your Way to Better Mental Health</h2>
+        <p><strong>Summary:</strong> In our fast-paced world, sleep is often overlooked. But did you know that sleep is one of the most crucial elements for maintaining emotional stability and mental health?</p>
+        <p><a href="javascript:void(0)" class="read-more" data-target="blog2-content">Read more</a></p>
+        <div id="blog2-content" class="hidden">
+            <p>Sleep plays a vital role in how we feel both physically and mentally. Getting enough sleep each night is essential for emotional regulation, memory, and cognitive function. Unfortunately, many of us don’t get the 7-9 hours of quality sleep our bodies need to function at their best.</p>
+            <h3>Key Takeaways:</h3>
+            <ul>
+                <li>Aim for 7-9 hours of sleep each night for optimal mental health.</li>
+                <li>Sleep deprivation can worsen anxiety and stress.</li>
+                <li>Prioritize a bedtime routine to ensure restful, rejuvenating sleep.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Blog 3 -->
+    <section class="blog-post" id="blog3">
+        <div class="large-placeholder" style="background-image: url('mindful.jpg');"></div>
+        <h2>Mindfulness Practices to Boost Mental Resilience</h2>
+        <p><strong>Summary:</strong> In our busy lives, it’s easy to get overwhelmed, but mindfulness can help. Discover how simple mindfulness practices can enhance your mental strength and well-being.</p>
+        <p><a href="javascript:void(0)" class="read-more" data-target="blog3-content">Read more</a></p>
+        <div id="blog3-content" class="hidden">
+            <p>Mindfulness is the practice of being present in the moment, acknowledging your thoughts and feelings without judgment. By embracing mindfulness, you can build greater emotional resilience, reduce stress, and gain control over negative thinking patterns.</p>
+            <h3>Key Takeaways:</h3>
+            <ul>
+                <li>Mindfulness helps you stay present and calm, even in stressful situations.</li>
+                <li>Regular mindfulness practices can reduce anxiety and improve emotional balance.</li>
+                <li>Simple activities like mindful breathing and meditation can be done anywhere, anytime.</li>
+            </ul>
+        </div>
+    </section>
+
+    <script>
+        // JavaScript to toggle "Read More" sections
+        document.querySelectorAll('.read-more').forEach(button => {
+            button.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('data-target');
+                const fullContent = document.getElementById(targetId);
+                fullContent.classList.toggle('hidden');
+
+                // Toggle "Read more" to "Read less"
+                const isHidden = fullContent.classList.contains('hidden');
+                this.textContent = isHidden ? 'Read more' : 'Read less';
+            });
+        });
+    </script>
+
+<footer>
+    <div class="footer-container">
+        <div class="footer-info">
+            <h2>Mind & Thrive</h2>
+            <p>&copy; 2024 Mind & Thrive. All rights reserved.</p>
+                    <p>Your mental health matters, and we're here to help you on your journey.</p>
+        </div>
+        <div class="footer-links">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="homepage.html">Home</a></li>
+                <li><a href="About.html">About Us</a></li>
+                <li><a href="Wellness.html">Blog</a></li>
+                <li><a href="ContactUs.html">Contact</a></li>
+            </ul>
+        </div>
+        <div class="footer-contact">
+            <h3>Contact Us</h3>
+            <p>Email: <a href="mailto:support@mindandthrive.com">support@mindandthrive.com</a></p>
+            <p>Phone: <a href="tel:01-4132658">01-4132658</a></p>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
